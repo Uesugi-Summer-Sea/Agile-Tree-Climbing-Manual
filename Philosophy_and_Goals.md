@@ -28,7 +28,7 @@
 基本原則
 以人為本，以法為輔
 
-## 實踐方式:創意學習
+## 執行與實踐
 「創意學習跑跑跑跑」(CL4P, Creative Learning PPPP):
 
 「專案」(Projects)、「熱情」(Passion)、「同儕」(Peers)及「玩樂」(Play)
