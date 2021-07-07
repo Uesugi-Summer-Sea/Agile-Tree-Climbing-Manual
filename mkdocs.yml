@@ -1,2 +1,23 @@
 site_name: Agile Tree Climbing Manual
-theme: readthedocs
+theme:
+  name: material
+  nav_style: dark
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        name: Switch to light mode
+        icon: material/toggle-switch-off-outline
+repo_url: https://gitlab.com/Multimedia-Processing/Digital-Logic-Design
+plugins:
+  - search
+markdown_extensions:
+  - smarty
+  - mdx_truly_sane_lists
