@@ -9,8 +9,8 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch
         name: Switch to dark mode
+        icon: material/toggle-switch
     - scheme: slate
       toggle:
         name: Switch to light mode
