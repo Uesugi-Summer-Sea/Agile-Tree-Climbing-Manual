@@ -1,6 +1,11 @@
-site_name: Agile Tree Climbing Manual
+site_name: 敏捷攀樹手冊
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  extra:
+    homepage: https://agile-tree-climbing-manual.readthedocs.io
+  language: zh-TW
   nav_style: dark
   highlightjs: true
   hljs_languages:
@@ -15,9 +20,79 @@ theme:
       toggle:
         name: Switch to light mode
         icon: material/toggle-switch-off-outline
-repo_url: https://gitlab.com/Multimedia-Processing/Digital-Logic-Design
+  features:
+    # - navigation.instant
+    - navigation.tracking
+    # - navigation.tabs # 目錄橫放至頂端
+    # - navigation.tabs.sticky # 目錄橫放至頂端
+    # - navigation.sections # 左側目錄全部攤開
+    # - navigation.expand # 左側目錄全部攤開但可以收合
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate # 右側目錄加入至左側目錄
+    - search.suggest # 建議搜尋功能
+    - search.highlight
+    - search.share
+repo_url: https://github.com/Uesugi-Summer-Sea/Agile-Tree-Climbing-Manual
 plugins:
   - search
+nav:
+  - 序: 'README.md'
+  - 第1章 理念與目標:
+    - 簡介: 1-理念與目標/README.md
+    - 第1節 創意學習: 1-理念與目標/1-創意學習.md
+  - 第2章 安全守則與規範:
+    - 簡介: 2-安全守則與規範/README.md
+    - 第1節 綜合性風險評估: 2-安全守則與規範/1-綜合性風險評估.md
+    - 第2節 環境風險評估: 2-安全守則與規範/2-環境風險評估.md
+    - 第3節 樹木風險評估: 2-安全守則與規範/3-樹木風險評估.md
+    - 第4節 器械使用規範: 2-安全守則與規範/4-器械使用規範.md
+    - 第5節 繩結使用規範: 2-安全守則與規範/5-繩結使用規範.md
+    - 第6節 攀樹安全守則: 2-安全守則與規範/6-攀樹安全守則.md
+    - 第7節 無痕山林: 2-安全守則與規範/7-無痕山林.md
+  - 第3章 攀樹技術:
+    - 簡介: 3-攀樹技術/README.md
+    - 第1節 攀樹裝備: 3-攀樹技術/1-攀樹裝備.md
+    - 第2節 繩結技術: 3-攀樹技術/2-繩結技術.md
+    - 第3節 模組化: 3-攀樹技術/3-模組化.md
+    - 第4節 攀樹系統: 3-攀樹技術/4-攀樹系統.md
+    - 第5節 攀樹技巧: 3-攀樹技術/5-攀樹技巧.md
+  - 第4章 樹藝與樹醫:
+    - 簡介: 4-樹藝與樹醫/README.md
+    - 第1節 樹木生理結構: 4-樹藝與樹醫/1-樹木生理結構.md
+    - 第2節 樹藝: 4-樹藝與樹醫/2-樹藝.md
+    - 第3節 樹木常見病蟲害: 4-樹藝與樹醫/3-樹木常見病蟲害.md
+    - 第4節 樹醫: 4-樹藝與樹醫/4-樹醫.md
+  - 第5章 跨領域應用:
+    - 簡介: 5-跨領域應用/README.md
+    - 第1節 休閒活動: 5-跨領域應用/1-休閒活動.md
+    - 第2節 運動競賽: 5-跨領域應用/2-運動競賽.md
+    - 第3節 社會工作: 5-跨領域應用/3-社會工作.md
+    - 第4節 教育: 5-跨領域應用/4-教育.md
+    - 第5節 規劃概論:
+      - 核心: 5-跨領域應用/5-敏捷活動規劃宣言.md
+      - 規劃: 5-跨領域應用/5-規劃論.md
+      - 範例1 國小社團活動課程規劃: 5-跨領域應用/5-範例/1-國小社團活動課程.md
+      - 範例2 教練與助教培訓課程: 5-跨領域應用/5-範例/2-教練與助教培訓課程.md
+    - 第6節 攀樹證照: 5-跨領域應用/6-證照.md
+  - 第6章 社群與專案:
+    - 簡介: 6-社群與專案/README.md
+    - 第1節 社群參與: 6-社群與專案/1-社群參與.md
+    - 第2節 如何成為核心成員: 6-社群與專案/2-核心成員.md
+  - 附錄:
+    - 參考資料: 7-附錄/1-參考資料.md
+    - 索引: 7-附錄/2-索引.md
 markdown_extensions:
+  - meta
   - smarty
   - mdx_truly_sane_lists
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+extra:
+  analytics:
+    provider: google
+    property: UA-156555093-1
