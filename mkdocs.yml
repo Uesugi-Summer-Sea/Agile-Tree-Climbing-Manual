@@ -16,26 +16,30 @@ theme:
       toggle:
         name: Switch to dark mode
         icon: material/toggle-switch
+      primary: blue
     - scheme: slate
       toggle:
         name: Switch to light mode
         icon: material/toggle-switch-off-outline
+      primary: indigo
   features:
-    # - navigation.instant
+    # - navigation.instant # 當點擊其他頁面時網頁不會重新整理且表留只在首頁
     - navigation.tracking
     # - navigation.tabs # 目錄橫放至頂端
     # - navigation.tabs.sticky # 目錄橫放至頂端
     # - navigation.sections # 左側目錄全部攤開
-    # - navigation.expand # 左側目錄全部攤開但可以收合
-    - navigation.indexes
+    - navigation.expand # 左側目錄全部攤開但可以收合
     - navigation.top
-    - toc.integrate # 右側目錄加入至左側目錄
+    # - toc.integrate # 右側目錄加入至左側目錄
     - search.suggest # 建議搜尋功能
+    # - navigation.indexes # 只顯示部份索引
     - search.highlight
     - search.share
 repo_url: https://github.com/Uesugi-Summer-Sea/Agile-Tree-Climbing-Manual
 plugins:
   - search
+  - mermaid2
+authors: Chenzhi Wu
 nav:
   - 序: 'README.md'
   - 第1章 理念與目標:
@@ -78,7 +82,7 @@ nav:
   - 第6章 社群與專案:
     - 簡介: 6-社群與專案/README.md
     - 第1節 社群參與: 6-社群與專案/1-社群參與.md
-    - 第2節 如何成為核心成員: 6-社群與專案/2-核心成員.md
+    - 第2節 核心成員: 6-社群與專案/2-核心成員.md
   - 附錄:
     - 參考資料: 7-附錄/1-參考資料.md
     - 索引: 7-附錄/2-索引.md
@@ -92,6 +96,13 @@ markdown_extensions:
   - toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 extra:
   analytics:
     provider: google
