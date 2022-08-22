@@ -85,6 +85,7 @@ nav:
   - 附錄:
     - 參考資料: 7-附錄/1-參考資料.md
     - 索引: 7-附錄/2-索引.md
+  - 出版資訊: 出版資訊.md
 markdown_extensions:
   - meta
   - smarty
